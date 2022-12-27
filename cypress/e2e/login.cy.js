@@ -140,7 +140,7 @@ describe('Login Page Tests', () => {
 
 
     // Sign Up
-    it('Sign up link is present', () => {
+    it('Sign up button is present', () => {
         loginPage.elements.signUpButton()
         .should('contain', 'Sign Up')
     })
