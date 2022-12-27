@@ -145,7 +145,7 @@ describe('Login Page Tests', () => {
         .should('contain', 'Sign Up')
     })
 
-    it('Sign up link is present routes to sign up page when clicked', () => {
+    it('Sign up button is present routes to sign up page when clicked', () => {
         loginPage.signUp();
         cy.url().should('include', 'signup')
     })
