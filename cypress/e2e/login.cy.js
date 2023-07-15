@@ -133,6 +133,7 @@ describe('Login Page Tests', () => {
     })
 
     // Don't have an account
+    // Try 'have value' as well
     it('Dont have an account text is present', () => {
         loginPage.elements.accountText()
         .should('have.text', `Don't have an account?`)
@@ -150,6 +151,12 @@ describe('Login Page Tests', () => {
         cy.url().should('include', 'signup')
     })
 
+    it.only('Create a Table', function () {
+        cy.task('queryDb', `INSERT INTO Pools (PoolId, ApplicationUserId, Address, City) VALUES
+        (001, "John", "House No. 01", "Helsinki")`).then((result) => {
+                expect(result.affectedRows).to.equal(4)
+            })
+    })
   
 
 
