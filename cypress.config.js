@@ -9,8 +9,9 @@ module.exports = defineConfig({
     // excludeSpecPattern: '**/spec.cy.js',
     baseUrl: 'http://localhost:8100',
     viewportHeight: 1080,
-    viewportWidth: 1920,
-    experimentalSessionAndOrigin: true,
+    // viewportWidth: 1920,
+    viewportWidth: 500,
+    // experimentalSessionAndOrigin: true,
     experimentalStudio: true,
     env: {
       API_BASE_URL: 'https://api.typeform.com/',

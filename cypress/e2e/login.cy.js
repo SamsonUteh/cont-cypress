@@ -112,12 +112,16 @@ describe('Login Page Tests', () => {
 
     // login with unconfirmed status
 
-    it('Succesfull login routes with notification', () => {
-        loginPage.emailInput('evergreen10075@yahoo.com');
+    it.only('Succesfull login routes with notification', () => {
+        loginPage.emailInput('evergreen10073@yahoo.com');
         loginPage.passwordInput('sS@amdo34df');
         loginPage.login();
-        loginPage.elements.notification().should('contain', 'Login successful')
-        cy.url().should('contain', 'home')
+        loginPage.elements.notification().should('contain', 'Login Successful')
+        // cy.url().should('contain', 'home');
+        cy.url().should('include', 'home');
+        cy.reload()
+        // cy.go('back')
+        // cy.url().should('contain', 'login')
     })
 
      // Forgot Password
@@ -151,12 +155,12 @@ describe('Login Page Tests', () => {
         cy.url().should('include', 'signup')
     })
 
-    it.only('Create a Table', function () {
-        cy.task('queryDb', `INSERT INTO Pools (PoolId, ApplicationUserId, Address, City) VALUES
-        (001, "John", "House No. 01", "Helsinki")`).then((result) => {
-                expect(result.affectedRows).to.equal(4)
-            })
-    })
+    // it.only('Create a Table', function () {
+    //     cy.task('queryDb', `INSERT INTO Pools (PoolId, ApplicationUserId, Address, City) VALUES
+    //     (001, "John", "House No. 01", "Helsinki")`).then((result) => {
+    //             expect(result.affectedRows).to.equal(4)
+    //         })
+    // })
   
 
 

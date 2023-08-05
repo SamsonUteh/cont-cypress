@@ -2,3 +2,11 @@ Do a reveiw of what you have learnt on cypress
 Work on the ajo app but only on items that you need not duplicate their implementation
 Look for tasks that you have not performed that you may read up on
 Run the labels as a whole instead of individually
+
+Look at component testing and check the items in Core Concepts tab
+Data driven tests
+nesting of before each
+And must you use before each always
+What is page object model
+parent-find check sidemenu.cy
+how to run the tests in ci/cd and git

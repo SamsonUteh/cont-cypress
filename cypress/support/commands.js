@@ -31,9 +31,9 @@ Cypress.Commands.add('login', (email, password) => {
         cy.visit('/login');
         cy.get('input:first').type(email);
         cy.get('.mt-3 > .form-control').type(password);
-        cy.contains('Login').click();
+        cy.get('app-button').click();
         cy.url().should('contain', 'home')
     })
 })
 
-// You may do for logout
+// You may do for logout...Also try using cy.request to login programmatically

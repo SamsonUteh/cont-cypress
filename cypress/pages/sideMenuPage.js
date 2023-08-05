@@ -7,7 +7,7 @@ class sideMenuPage {
         createPoolHeader: () => cy.get('app-create-pool.ion-page > .pool_header'),
         viewPoolsText: () => cy.contains('View Pools'),
         poolHeader: () => cy.get('.pool_header'),
-        faqsText: () => cy.contains('FAQs'),
+        faqsText: () => cy.contains('Help'),
         faqHeader: () => cy.get('.question_header > .freq_question1'),
         contactAdminText: () => cy.contains('Contact Admin'),
         contactAdminHeader: () => cy.get('.freq_question1'),

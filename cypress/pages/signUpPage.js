@@ -9,7 +9,7 @@ class signUpPage {
     lastNameRequiredError: () => cy.get(':nth-child(2) > :nth-child(3) > .error'),
 
     emailField: () => cy.get(':nth-child(3) > label'),
-    emailInputField: () => cy.get(':nth-child(3) > .input-group > .form-control'),
+    emailInputField: () => cy.get(':nth-child(3) > .input-group > .ng-untouched > .native-input'),
     emailRequiredError: () => cy.get(':nth-child(3) > :nth-child(3) > .error'),
     emailPatternError: () => cy.contains('Invalid email'),
     

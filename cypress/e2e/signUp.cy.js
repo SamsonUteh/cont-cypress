@@ -1,14 +1,14 @@
 /// <reference types="cypress"/>
 import signUpPage from '../pages/signUpPage';
 
-describe.skip('SignUp Page Tests', {browser: 'chrome'}, () => {
+describe('SignUp Page Tests', {browser: 'chrome'}, () => {
   beforeEach(() => {
     cy.visit('/signup');
   })
 
   // First name
 
-  it('Firstname field is well labelled and with a bold font', () => {
+  it.only('Firstname field is well labelled and with a bold font', () => {
     signUpPage.elements.firstNameField()
       .should('contain', 'FirstName')
       .should('have.css', 'font-weight', '700')
@@ -26,7 +26,7 @@ describe.skip('SignUp Page Tests', {browser: 'chrome'}, () => {
 
   })
 
-  it.only('Validation message disappears from firstname field when valid data is entered', () => {
+  it('Validation message disappears from firstname field when valid data is entered', () => {
     signUpPage.firstNameInput();
     signUpPage.elements.firstNameField().click();
     signUpPage.elements.firstNameRequiredError().should('contain', 'Firstname is required');
@@ -81,8 +81,8 @@ describe.skip('SignUp Page Tests', {browser: 'chrome'}, () => {
 
   })
 
-  it('Validation message for invalid email field', () => {
-    signUpPage.emailInput();
+  it.only('Validation message for invalid email field', () => {
+    // signUpPage.emailInput(); You need not write this since you can type directly
     signUpPage.emailInputText('deace@');
     signUpPage.elements.emailField().click();
     signUpPage.elements.emailPatternError().should('contain', 'Invalid email')

@@ -15,7 +15,7 @@ class loginPage {
         passwordInputField: () => cy.get('.mt-3 > .form-control'),
         passwordValidationMessage: () => cy.get('.error'),
 
-        loginButton: () => cy.contains('Login'),
+        loginButton: () => cy.get('[data-cy="try"]'),
 
         signUpButton: () => cy.contains('Sign Up'),
 
